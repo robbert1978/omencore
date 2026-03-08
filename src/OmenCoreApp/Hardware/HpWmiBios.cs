@@ -185,7 +185,7 @@ namespace OmenCore.Hardware
         /// Newer OMEN (V2+): 100 (percentage)
         /// Auto-detected during initialization.
         /// </summary>
-        public int MaxFanLevel { get; private set; } = 55;
+        public int MaxFanLevel { get; private set; } = 47;
         public bool HeartbeatEnabled => _heartbeatEnabled;
         
         // Heartbeat health properties (v2.7.0)
@@ -549,12 +549,12 @@ namespace OmenCore.Hardware
                 }
 
                 // Default to classic 0-55 krpm range for V1 models
-                MaxFanLevel = 55;
+                MaxFanLevel = 47;
                 _logging?.Info($"Max fan level: {MaxFanLevel} (classic krpm range)");
             }
             catch (Exception ex)
             {
-                MaxFanLevel = 55;
+                MaxFanLevel = 47;
                 _logging?.Warn($"Failed to detect max fan level, using default {MaxFanLevel}: {ex.Message}");
             }
         }

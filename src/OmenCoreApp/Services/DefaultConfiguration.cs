@@ -99,8 +99,8 @@ namespace OmenCore.Services
 
             // OmenMon-style EC registers for fan control (XSS1/XSS2 - Fan Set Speed %)
             // These work better on 2022+ OMEN models than the older 0x44/0x45 registers
-            config.EcFanRegisterMap["CPU"] = 0x2C;  // XSS1 - CPU Fan Speed %
-            config.EcFanRegisterMap["GPU"] = 0x2D;  // XSS2 - GPU Fan Speed %
+            config.EcFanRegisterMap["CPU"] = 0x34;  // XSS1 - CPU Fan Speed %
+            config.EcFanRegisterMap["GPU"] = 0x35;  // XSS2 - GPU Fan Speed %
 
             config.Undervolt = new UndervoltPreferences
             {

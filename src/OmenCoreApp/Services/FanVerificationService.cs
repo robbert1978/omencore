@@ -114,12 +114,12 @@ namespace OmenCore.Services
         private readonly LoggingService _logging;
         
         // Verification parameters
-        private const int VerificationRetries = 3;          // Retry verification up to 3 times (increased from 2)
+        private const int VerificationRetries = 5;          // Retry verification up to 3 times (increased from 2)
         private const int VerificationSamples = 5;          // Take 5 RPM samples and average (increased from 3)
-        private const int SampleDelayMs = 200;              // Wait 200ms between samples (reduced for faster verification)
-        private const int MaxLevel = 55;  // HP uses 55 as max on most models
+        private const int SampleDelayMs = 1500;              // Wait 200ms between samples (reduced for faster verification)
+        private const int MaxLevel = 47;  // HP uses 55 as max on most models
         private const int MinRpm = 0;
-        private const int MaxRpm = 5500;  // Typical max RPM
+        private const int MaxRpm = 4700;  // Typical max RPM
         
         // Verification timing
         private const int FanResponseDelayMs = 2000;  // Reduced from 2500ms for faster response
@@ -868,7 +868,7 @@ namespace OmenCore.Services
         /// <summary>
         /// Expected RPM for the requested percent.
         /// </summary>
-        public int ExpectedRpm => (int)(RequestedPercent / 100.0 * 5500);
+        public int ExpectedRpm => (int)(RequestedPercent / 100.0 * 4700);
         
         /// <summary>
         /// Deviation percentage from expected RPM.

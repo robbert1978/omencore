@@ -215,13 +215,13 @@ namespace OmenCore.Services
         internal static int PercentToExpectedRpmDefault(int percent)
         {
             // Simple linear estimation: 0% = 0 RPM, 100% = 5500 RPM
-            return (int)(percent / 100.0 * 5500);
+            return (int)(percent / 100.0 * 4700);
         }
 
         internal static int RpmToPercentDefault(int rpm)
         {
             // Reverse of above
-            return Math.Min(100, Math.Max(0, (int)(rpm / 5500.0 * 100)));
+            return Math.Min(100, Math.Max(0, (int)(rpm / 4700 * 100)));
         }
     }
 

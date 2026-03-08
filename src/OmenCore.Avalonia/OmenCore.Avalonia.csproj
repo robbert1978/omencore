@@ -24,6 +24,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="..\OmenCoreApp\Services\DefaultConfiguration.cs" Link="DefaultConfiguration.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <!-- Avalonia UI Framework -->
     <PackageReference Include="Avalonia" Version="11.2.3" />
     <PackageReference Include="Avalonia.Desktop" Version="11.2.3" />

@@ -351,7 +351,7 @@ namespace OmenCore.Hardware
                 SupportsFanControlWmi = true,
                 SupportsFanCurves = true,
                 FanZoneCount = 2,
-                MaxFanLevel = 55,
+                MaxFanLevel = 47,
                 SupportsPerformanceModes = true,
                 HasMuxSwitch = true,
                 SupportsGpuPowerBoost = true,

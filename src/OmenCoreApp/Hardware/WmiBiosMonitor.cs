@@ -692,8 +692,8 @@ namespace OmenCore.Hardware
         {
             // Estimate percentage based on typical laptop fan range (0-5500 RPM)
             if (rpm <= 0) return 0;
-            if (rpm >= 5500) return 100;
-            return (int)(rpm / 55.0);
+            if (rpm >= 4700) return 100;
+            return (int)(rpm / 47.0);
         }
 
         private void TryApplyCpuTemperatureFallback()

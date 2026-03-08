@@ -996,8 +996,8 @@ namespace OmenCore.Hardware
                             }
                         }
                         
-                        fan1Percent = Math.Clamp((fan1Rpm * 100) / 5500, 0, 100);
-                        fan2Percent = Math.Clamp((fan2Rpm * 100) / 5500, 0, 100);
+                        fan1Percent = Math.Clamp(fan1Rpm / _maxFanLevel, 0, 100);
+                        fan2Percent = Math.Clamp(fan2Rpm / _maxFanLevel, 0, 100);
                         gotValidData = true;
                         _logging?.Debug($"[FanRPM] Direct RPM: CPU={fan1Rpm} ({fan1Percent}%), GPU={fan2Rpm} ({fan2Percent}%)");
                     }
@@ -1047,8 +1047,8 @@ namespace OmenCore.Hardware
                         }
                         
                         // Calculate percent based on max RPM range (5500 RPM = 100%)
-                        fan1Percent = Math.Clamp((fan1Rpm * 100) / 5500, 0, 100);
-                        fan2Percent = Math.Clamp((fan2Rpm * 100) / 5500, 0, 100);
+                        fan1Percent = Math.Clamp(fan1Rpm / _maxFanLevel, 0, 100);
+                        fan2Percent = Math.Clamp(fan2Rpm / _maxFanLevel, 0, 100);
                         gotValidData = true;
                         
                         _logging?.Info($"HP WMI Fan levels: Fan1={fanLevel.Value.fan1} -> {fan1Rpm} RPM ({fan1Percent}%), Fan2={fanLevel.Value.fan2} -> {fan2Rpm} RPM ({fan2Percent}%)");
